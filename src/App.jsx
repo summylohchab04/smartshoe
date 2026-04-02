@@ -7,14 +7,7 @@ import {
 } from 'lucide-react';
 import './App.css';
 
-// Import Assets
-import heroGif from './assets/smart_shoe_model.gif';
-import ultrasonicImg from './assets/ultrasonic_sensor.png';
-import esp32Img from './assets/esp32_38pin.png';
-import motorDriverImg from './assets/2n2222a.png';
-import hapticImg from './assets/haptic_motor.png';
-import protoMain from './assets/prototype_full_setup.png';
-import protoClose from './assets/prototype_close_up.png';
+
 
 const App = () => {
   const fadeInUp = {
@@ -83,7 +76,7 @@ const App = () => {
           initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8 }}
         >
           <div className="hero-glow"></div>
-          <img src={heroGif} alt="Smart Shoe Animated Model" className="hero-image" />
+          <img src="/smart_shoe_model.gif" alt="Smart Shoe Animated Model" className="hero-image" />
         </motion.div>
       </section>
 
@@ -206,28 +199,28 @@ const App = () => {
         </motion.div>
         <motion.div className="tech-grid" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer}>
            <motion.div className="tech-card" variants={fadeInUp}>
-              <div className="tech-image-container"><img src={ultrasonicImg} alt="Ultrasonic Sensor" /></div>
+              <div className="tech-image-container"><img src="/ultrasonic_sensor.png" alt="Ultrasonic Sensor" /></div>
               <div className="tech-info">
                  <h3>HC-SR04 Sensor</h3>
                  <p>Provides multi-directional mapping with precise echo timing &lt;10ms.</p>
               </div>
            </motion.div>
            <motion.div className="tech-card featured" variants={fadeInUp}>
-              <div className="tech-image-container"><img src={esp32Img} alt="ESP32" /></div>
+              <div className="tech-image-container"><img src="/esp32_38pin.png" alt="ESP32" /></div>
               <div className="tech-info">
                  <h3>ESP32 Core</h3>
                  <p>Dual-core processing handles priority logic instantly and efficiently.</p>
               </div>
            </motion.div>
            <motion.div className="tech-card" variants={fadeInUp}>
-              <div className="tech-image-container"><img src={motorDriverImg} alt="2N2222A Transistor" /></div>
+              <div className="tech-image-container"><img src="/2n2222a.png" alt="2N2222A Transistor" /></div>
               <div className="tech-info">
                  <h3>2N2222A Driver</h3>
                  <p>Amplifies micro-signals safely to power tactile vibration motors.</p>
               </div>
            </motion.div>
            <motion.div className="tech-card" variants={fadeInUp}>
-              <div className="tech-image-container"><img src={hapticImg} alt="Haptic Motor" /></div>
+              <div className="tech-image-container"><img src="/haptic_motor.png" alt="Haptic Motor" /></div>
               <div className="tech-info">
                  <h3>Haptic & Audio</h3>
                  <p>Vibration motors and piezo buzzer formulate directional cues.</p>
@@ -241,10 +234,10 @@ const App = () => {
         <motion.div className="prototype-container" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer}>
           <motion.div className="prototype-media-grid" variants={fadeInUp}>
             <div className="proto-main">
-               <img src={protoMain} alt="Prototype Full Setup" />
+               <img src="/prototype_full_setup.png" alt="Prototype Full Setup" />
             </div>
             <div className="proto-sub">
-               <img src={protoClose} alt="Prototype Close Up" />
+               <img src="/prototype_close_up.png" alt="Prototype Close Up" />
             </div>
           </motion.div>
           <motion.div className="prototype-content" variants={fadeInUp}>
