@@ -51,7 +51,7 @@ const App = () => {
           initial="hidden" animate="visible" variants={staggerContainer}
         >
           <motion.h1 className="hero-title" variants={fadeInUp}>
-            Redefining <br/><span style={{background: 'linear-gradient(45deg, var(--accent-color), #ffffff)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>Independent Mobility.</span>
+            Redefining <br/><span style={{background: 'linear-gradient(135deg, var(--text-primary), var(--text-secondary))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>Independent Mobility.</span>
           </motion.h1>
           <motion.p className="hero-desc" variants={fadeInUp}>
             Smart wearable footwear that detects obstacles in real-time and guides movement through intelligent haptic feedback.
