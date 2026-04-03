@@ -237,87 +237,133 @@ const App = () => {
           <h1 className="section-title">Hardware Stack</h1>
         </motion.div>
         <motion.div className="tech-grid" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer}>
+           
+           {/* Card 1: Ultrasonic Sensing */}
            <motion.div className="tech-card" variants={fadeInUp}>
               <div className="tech-image-container"><img src="/ultrasonic_sensor.png" alt="Ultrasonic Sensor" /></div>
               <div className="tech-info">
-                 <h3>HC-SR04 Sensor</h3>
+                 <h3>Multi-Directional Sensing</h3>
                  <p>Provides multi-directional mapping with precise echo timing &lt;10ms.</p>
                  <div className="tech-tags">
                     <span className="tech-tag">Range: 0 – 4m</span>
                     <span className="tech-tag">Fast Response</span>
                  </div>
+                 <hr className="tech-divider" />
                  <div className="tech-detail">
-                    <div className="tech-detail-item"><span className="tech-detail-label">Why</span><span>Traditional tools cannot detect elevated or distant obstacles effectively.</span></div>
-                    <div className="tech-detail-item"><span className="tech-detail-label">Role</span><span>Primary sensing layer for obstacle detection.</span></div>
+                    <div className="tech-detail-item">
+                       <span className="tech-detail-label">Why</span>
+                       <span>Traditional tools cannot detect elevated or distant obstacles effectively.</span>
+                    </div>
+                    <div className="tech-detail-item">
+                       <span className="tech-detail-label">Role</span>
+                       <span>Primary sensing layer for obstacle detection.</span>
+                    </div>
                  </div>
               </div>
            </motion.div>
-           <motion.div className="tech-card featured" variants={fadeInUp}>
+
+           {/* Card 2: ESP32 Intelligence Core */}
+           <motion.div className="tech-card" variants={fadeInUp}>
               <div className="tech-image-container"><img src="/esp32_38pin.png" alt="ESP32" /></div>
               <div className="tech-info">
-                 <h3>ESP32 Core</h3>
+                 <h3>ESP32 Intelligence Core</h3>
                  <p>Dual-core processing handles priority logic instantly and efficiently.</p>
                  <div className="tech-tags">
                     <span className="tech-tag">Dual-core 240MHz</span>
                     <span className="tech-tag">WiFi / Bluetooth</span>
                  </div>
+                 <hr className="tech-divider" />
                  <div className="tech-detail">
-                    <div className="tech-detail-item"><span className="tech-detail-label">Why</span><span>Ensures fast processing and real-time decision making.</span></div>
-                    <div className="tech-detail-item"><span className="tech-detail-label">Role</span><span>Central control unit (brain of the system).</span></div>
+                    <div className="tech-detail-item">
+                       <span className="tech-detail-label">Why</span>
+                       <span>Ensures fast processing and real-time decision making.</span>
+                    </div>
+                    <div className="tech-detail-item">
+                       <span className="tech-detail-label">Role</span>
+                       <span>Central control unit (brain of the system).</span>
+                    </div>
                  </div>
               </div>
            </motion.div>
+
+           {/* Card 3: Motor Driver Circuit */}
            <motion.div className="tech-card" variants={fadeInUp}>
               <div className="tech-image-container"><img src="/2n2222a.png" alt="2N2222A Transistor" /></div>
               <div className="tech-info">
-                 <h3>2N2222A Driver</h3>
+                 <h3>Motor Driver Circuit</h3>
                  <p>Amplifies micro-signals safely to power tactile vibration motors.</p>
                  <div className="tech-tags">
-                    <span className="tech-tag">2N2222A NPN</span>
+                    <span className="tech-tag">2N2222A NPN Transistor</span>
                     <span className="tech-tag">1kΩ Resistor</span>
-                    <span className="tech-tag">100uF Cap</span>
+                    <span className="tech-tag">100uF Capacitor</span>
                  </div>
+                 <hr className="tech-divider" />
                  <div className="tech-detail">
-                    <div className="tech-detail-item"><span className="tech-detail-label">Why</span><span>Microcontrollers cannot directly drive motors safely.</span></div>
-                    <div className="tech-detail-item"><span className="tech-detail-label">Role</span><span>Power interface between ESP32 and motors.</span></div>
+                    <div className="tech-detail-item">
+                       <span className="tech-detail-label">Why</span>
+                       <span>Microcontrollers cannot directly drive motors safely.</span>
+                    </div>
+                    <div className="tech-detail-item">
+                       <span className="tech-detail-label">Role</span>
+                       <span>Acts as power interface between ESP32 and motors.</span>
+                    </div>
                  </div>
               </div>
            </motion.div>
+
+           {/* Card 4: Haptic Feedback System */}
            <motion.div className="tech-card" variants={fadeInUp}>
               <div className="tech-image-container"><img src="/haptic_motor.png" alt="Haptic Motor" /></div>
               <div className="tech-info">
-                 <h3>Haptic & Audio</h3>
+                 <h3>Haptic Feedback System</h3>
                  <p>Vibration motors and piezo buzzer formulate directional cues.</p>
                  <div className="tech-tags">
                     <span className="tech-tag">Vibration Feedback</span>
                     <span className="tech-tag">Audio Alert</span>
                  </div>
+                 <hr className="tech-divider" />
                  <div className="tech-detail">
-                    <div className="tech-detail-item"><span className="tech-detail-label">Why</span><span>Provides intuitive feedback for navigation.</span></div>
-                    <div className="tech-detail-item"><span className="tech-detail-label">Role</span><span>User interaction and communication layer.</span></div>
+                    <div className="tech-detail-item">
+                       <span className="tech-detail-label">Why</span>
+                       <span>Provides intuitive feedback for navigation.</span>
+                    </div>
+                    <div className="tech-detail-item">
+                       <span className="tech-detail-label">Role</span>
+                       <span>User interaction and communication layer.</span>
+                    </div>
                  </div>
               </div>
            </motion.div>
+
+           {/* Card 5: Smart Power Management */}
            <motion.div className="tech-card" variants={fadeInUp}>
               <div className="tech-image-container">
-                 <div className="power-visual">
-                    <Battery size={48} />
+                 <div className="power-visual" style={{display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', color: 'var(--accent-color)'}}>
+                    <Battery size={64} />
                  </div>
               </div>
               <div className="tech-info">
-                 <h3>Smart Power</h3>
+                 <h3>Smart Power Management</h3>
                  <p>Regulated power supply with safe charging and voltage boosting.</p>
                  <div className="tech-tags">
                     <span className="tech-tag">3.7V Li-ion</span>
-                    <span className="tech-tag">TP4056</span>
-                    <span className="tech-tag">XL6009 Boost</span>
+                    <span className="tech-tag">TP4056 Charging</span>
+                    <span className="tech-tag">XL6009 Boost Module</span>
                  </div>
+                 <hr className="tech-divider" />
                  <div className="tech-detail">
-                    <div className="tech-detail-item"><span className="tech-detail-label">Why</span><span>Ensures stable and rechargeable power supply.</span></div>
-                    <div className="tech-detail-item"><span className="tech-detail-label">Role</span><span>Maintains system power efficiency and reliability.</span></div>
+                    <div className="tech-detail-item">
+                       <span className="tech-detail-label">Why</span>
+                       <span>Ensures stable and rechargeable power supply.</span>
+                    </div>
+                    <div className="tech-detail-item">
+                       <span className="tech-detail-label">Role</span>
+                       <span>Maintains system power efficiency and reliability.</span>
+                    </div>
                  </div>
               </div>
            </motion.div>
+
         </motion.div>
       </section>
 
