@@ -242,6 +242,14 @@ const App = () => {
               <div className="tech-info">
                  <h3>HC-SR04 Sensor</h3>
                  <p>Provides multi-directional mapping with precise echo timing &lt;10ms.</p>
+                 <div className="tech-tags">
+                    <span className="tech-tag">Range: 0 – 4m</span>
+                    <span className="tech-tag">Fast Response</span>
+                 </div>
+                 <div className="tech-detail">
+                    <div className="tech-detail-item"><span className="tech-detail-label">Why</span><span>Traditional tools cannot detect elevated or distant obstacles effectively.</span></div>
+                    <div className="tech-detail-item"><span className="tech-detail-label">Role</span><span>Primary sensing layer for obstacle detection.</span></div>
+                 </div>
               </div>
            </motion.div>
            <motion.div className="tech-card featured" variants={fadeInUp}>
@@ -249,6 +257,14 @@ const App = () => {
               <div className="tech-info">
                  <h3>ESP32 Core</h3>
                  <p>Dual-core processing handles priority logic instantly and efficiently.</p>
+                 <div className="tech-tags">
+                    <span className="tech-tag">Dual-core 240MHz</span>
+                    <span className="tech-tag">WiFi / Bluetooth</span>
+                 </div>
+                 <div className="tech-detail">
+                    <div className="tech-detail-item"><span className="tech-detail-label">Why</span><span>Ensures fast processing and real-time decision making.</span></div>
+                    <div className="tech-detail-item"><span className="tech-detail-label">Role</span><span>Central control unit (brain of the system).</span></div>
+                 </div>
               </div>
            </motion.div>
            <motion.div className="tech-card" variants={fadeInUp}>
@@ -256,6 +272,15 @@ const App = () => {
               <div className="tech-info">
                  <h3>2N2222A Driver</h3>
                  <p>Amplifies micro-signals safely to power tactile vibration motors.</p>
+                 <div className="tech-tags">
+                    <span className="tech-tag">2N2222A NPN</span>
+                    <span className="tech-tag">1kΩ Resistor</span>
+                    <span className="tech-tag">100uF Cap</span>
+                 </div>
+                 <div className="tech-detail">
+                    <div className="tech-detail-item"><span className="tech-detail-label">Why</span><span>Microcontrollers cannot directly drive motors safely.</span></div>
+                    <div className="tech-detail-item"><span className="tech-detail-label">Role</span><span>Power interface between ESP32 and motors.</span></div>
+                 </div>
               </div>
            </motion.div>
            <motion.div className="tech-card" variants={fadeInUp}>
@@ -263,6 +288,34 @@ const App = () => {
               <div className="tech-info">
                  <h3>Haptic & Audio</h3>
                  <p>Vibration motors and piezo buzzer formulate directional cues.</p>
+                 <div className="tech-tags">
+                    <span className="tech-tag">Vibration Feedback</span>
+                    <span className="tech-tag">Audio Alert</span>
+                 </div>
+                 <div className="tech-detail">
+                    <div className="tech-detail-item"><span className="tech-detail-label">Why</span><span>Provides intuitive feedback for navigation.</span></div>
+                    <div className="tech-detail-item"><span className="tech-detail-label">Role</span><span>User interaction and communication layer.</span></div>
+                 </div>
+              </div>
+           </motion.div>
+           <motion.div className="tech-card" variants={fadeInUp}>
+              <div className="tech-image-container">
+                 <div className="power-visual">
+                    <Battery size={48} />
+                 </div>
+              </div>
+              <div className="tech-info">
+                 <h3>Smart Power</h3>
+                 <p>Regulated power supply with safe charging and voltage boosting.</p>
+                 <div className="tech-tags">
+                    <span className="tech-tag">3.7V Li-ion</span>
+                    <span className="tech-tag">TP4056</span>
+                    <span className="tech-tag">XL6009 Boost</span>
+                 </div>
+                 <div className="tech-detail">
+                    <div className="tech-detail-item"><span className="tech-detail-label">Why</span><span>Ensures stable and rechargeable power supply.</span></div>
+                    <div className="tech-detail-item"><span className="tech-detail-label">Role</span><span>Maintains system power efficiency and reliability.</span></div>
+                 </div>
               </div>
            </motion.div>
         </motion.div>
