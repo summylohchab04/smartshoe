@@ -189,6 +189,45 @@ const App = () => {
             );
           })}
         </motion.div>
+
+        {/* Overhead Protection — Highlighted Safety Card */}
+        <motion.div
+          className="overhead-card"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+        >
+          <div className="overhead-pulse"></div>
+          <div className="overhead-inner">
+            <div className="overhead-header">
+              <div className="overhead-icon-wrap">
+                <Shield size={28} />
+              </div>
+              <div>
+                <h3>Overhead Protection</h3>
+                <p className="overhead-subtitle">High-Priority Safety Feature</p>
+              </div>
+            </div>
+            <div className="overhead-ranges">
+              <div className="overhead-range-item critical">
+                <div className="overhead-range-badge">≤ 60 cm</div>
+                <div>
+                  <p className="overhead-range-label">Critical Alert</p>
+                  <p className="overhead-range-desc">Continuous vibration + buzzer</p>
+                </div>
+              </div>
+              <div className="overhead-range-item warning">
+                <div className="overhead-range-badge">60 – 100 cm</div>
+                <div>
+                  <p className="overhead-range-label">Pulsed Alert</p>
+                  <p className="overhead-range-desc">Pulsed alerts based on distance</p>
+                </div>
+              </div>
+            </div>
+            <p className="overhead-desc">Detects obstacles at head level and provides immediate alerts to prevent injury.</p>
+          </div>
+        </motion.div>
       </section>
 
       {/* Technology / Hardware */}

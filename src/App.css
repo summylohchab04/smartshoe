@@ -470,6 +470,136 @@ section {
   line-height: 1.5;
 }
 
+/* ======================== OVERHEAD PROTECTION CARD ======================== */
+.overhead-card {
+  margin-top: 2rem;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--bg-card);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.overhead-pulse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent-purple), transparent);
+  animation: overhead-shimmer 3s ease-in-out infinite;
+}
+
+@keyframes overhead-shimmer {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+.overhead-inner {
+  padding: 2rem 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.overhead-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.overhead-icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(139, 92, 246, 0.1);
+  color: var(--accent-purple);
+  flex-shrink: 0;
+}
+
+.overhead-header h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+}
+
+.overhead-subtitle {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent-purple);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.85;
+}
+
+.overhead-ranges {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.overhead-range-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  flex: 1;
+  min-width: 220px;
+  padding: 1.25rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.overhead-range-item.critical {
+  border-color: rgba(139, 92, 246, 0.15);
+}
+
+.overhead-range-item.warning {
+  border-color: rgba(56, 189, 248, 0.15);
+}
+
+.overhead-range-badge {
+  font-family: 'Inter', monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.35rem 0.65rem;
+  border-radius: 6px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.overhead-range-item.critical .overhead-range-badge {
+  background: rgba(139, 92, 246, 0.12);
+  color: var(--accent-purple);
+}
+
+.overhead-range-item.warning .overhead-range-badge {
+  background: rgba(56, 189, 248, 0.12);
+  color: var(--accent-blue);
+}
+
+.overhead-range-label {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.2rem;
+}
+
+.overhead-range-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.overhead-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
 /* ======================== TECHNOLOGY GRID ======================== */
 .tech-grid {
   display: grid;
